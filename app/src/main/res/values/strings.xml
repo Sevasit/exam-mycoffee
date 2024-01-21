@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lovelyCoffee</string>
+
+    <string-array name="types">
+        <item>กรุงเทพมหานคร</item>
+        <item>ปริมณฑน</item>
+    </string-array>
+</resources>
