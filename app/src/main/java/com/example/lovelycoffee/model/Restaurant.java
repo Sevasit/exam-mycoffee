@@ -1,4 +1,4 @@
-package com.example.lovelycoffee;
+package com.example.lovelycoffee.model;
 
 public class Restaurant {
     public String id;

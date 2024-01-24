@@ -2,6 +2,7 @@ package com.example.lovelycoffee;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.lovelycoffee.model.Restaurant;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -52,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 clearFields();
+            }
+        });
+
+        Button buttonBack = findViewById(R.id.buttonBack);
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an Intent to navigate to the main activity
+                Intent intent = new Intent(MainActivity.this, ShowRes.class); // Replace MainActivity.class with the actual main activity class
+                startActivity(intent);
+                finish(); // Optional: finish the current activity if you don't want to come back to it
             }
         });
     }
